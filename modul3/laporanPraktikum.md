@@ -38,7 +38,7 @@ func main () {
 ### Output Unguided :	
 
 ##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul2/output/output-soal1.png)
+![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal1.png)
 [Penjelasan]
 
 //
@@ -80,7 +80,7 @@ func main() {
 ### Output Unguided :	
 
 ##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul2/output/output-soal2.png)
+![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal2.png)
 [Penjelasan] 
 
 //
@@ -132,5 +132,5 @@ func main() {
 ### Output Unguided :	
 
 ##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul2/output/output-soal3.png)
+![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal3.png)
 [Penjelasan]
