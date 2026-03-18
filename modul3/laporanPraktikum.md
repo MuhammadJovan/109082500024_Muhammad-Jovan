@@ -39,7 +39,7 @@ func main () {
 
 ##### Output 
 ![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal1.png)
-[Penjelasan]
+[Penjelasan]Program ini merupakan program function atau fungsi yang dimana program tersebut membaca 4 angka yaitu a,b,c,d. Lalu program menghitung baris ke 1 permutasi dan kombinasi antara a dan c, dan baris 2 antara b dan d, rumus yang di pakai dalam algoritma permutasi yaitu P(n,r) = n!/(n-r)! dan kombinasi yaitu C(n,r) = n!/(r!(n-r)!).
 
 //
 
@@ -81,8 +81,17 @@ func main() {
 
 ##### Output 
 ![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal2.png)
-[Penjelasan] 
+[Penjelasan] dari soal 2 program tersebut juga merupakan fungsi yang dimana terdapat 3 fungsi yaitu 
+- f(x) = X^2
+- g(x) = X - 2
+- h(x) = X + 1
 
+lalu program menghitung 
+- (f o g o h)(a)
+- (g o h o f)(b)
+- (h o f o g)(c)
+
+Setelah menghitung lalu fungsi dipanggil dari dalam keluar, jadi 3 fungsi tersebut dipanggil secara berurutan.
 //
 
 ### 3. [Soal]
@@ -133,4 +142,4 @@ func main() {
 
 ##### Output 
 ![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal3.png)
-[Penjelasan]
+[Penjelasan]program tersebut adalah program yang dibuat untuk menemukan posisi titik lingkaran, program ini mengecek sebuah titik berada, dengan cara menghitung jarak titik ke pusat lingkaran pakai rumus pada soal, dab dibandingkan dengan jari-jari, jika jarak <= radius berarti di dalam jika selain itu berarti di luar dan terakhir memakai kondisi if untuk menentukan hasilnya.
