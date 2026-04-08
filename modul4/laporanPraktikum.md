@@ -45,7 +45,7 @@ func main() {
 
 ##### Output 
 ![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul4/output/output-soal1.png)
-[Penjelasan]Program ini intinya buat ngitung permutasi sama kombinasi dari angka yang kita masukin. Jadi pertama ada fungsi faktorial yang dipakai buat nyari nilai faktorial (perkalian dari 1 sampai n). Nah dari situ dipakai lagi di fungsi permutasi buat hitung permutasi pakai rumus n!/(n−r)!, sama di fungsi kombinasi pakai rumus n!/(r!(n−r)!). Di bagian main, program minta 4 angka yaitu a, b, c, dan d. Terus dia hitung permutasi dan kombinasi dari (a, c) sama (b, d). Hasilnya ditampilin dalam dua baris, baris pertama buat a dan c, baris kedua buat b dan d. Jadi simpel aja, input angka → dihitung → keluar hasil.
+[Penjelasan]Program ini intinya buat ngitung permutasi sama kombinasi dari angka yang kita masukin. Jadi pertama ada fungsi faktorial yang dipakai buat nyari nilai faktorial (perkalian dari 1 sampai n). Nah dari situ dipakai lagi di fungsi permutasi buat hitung permutasi pakai rumus n!/(n−r)!, sama di fungsi kombinasi pakai rumus n!/(r!(n−r)!). Di bagian main, program minta 4 angka yaitu a, b, c, dan d. Terus dia hitung permutasi dan kombinasi dari (a, c) sama (b, d). Hasilnya ditampilin dalam dua baris, baris pertama buat a dan c, baris kedua buat b dan d. Jadi simpel aja, input angka  dihitung keluar hasil.
 
 
 //
