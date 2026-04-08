@@ -9,37 +9,44 @@
 ```go
 package main
 
-import "fmt"
-
-func faktorial(n int) int {
+import "fmt" 
+func factorial(n int) int {
 	hasil := 1
-	for i := 1; i<= n; i++ {
+	for i := 1; i <= n; i++ {
 		hasil *= i
 	}
-	return hasil
+	return	hasil
 }
 
-	func permutasi(n,r int) int {
-	return faktorial(n) / faktorial(n-r)
+func permutation (n,r int) int {
+	return factorial(n)/factorial(n-r)
 }
 
-	func kombinasi(n,r int) int {
-	return faktorial(n) / (faktorial(r) * faktorial(n-r))
+func combination (n,r int) int {
+	return factorial(n)/(factorial(r) * factorial(n-r))
 }
 
-func main () {
+func main() {
 	var a,b,c,d int
-	fmt.Scan(&a,&b,&c,&d)
+	
+	fmt.Scan(&a, &b, &c, &d)
 
-	fmt.Println(permutasi(a,c), kombinasi(a,c))
-	fmt.Println(permutasi(b,d), kombinasi(b,d))
+	p1 := permutation(a,c)
+	c1 := combination(a,c)
+
+	p2 := permutation(b,d)
+	c2 := combination(b,d)
+
+	fmt.Println(p1, c1)
+	fmt.Println(p2, c2)
 }
 ```
 ### Output Unguided :	
 
 ##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal1.png)
-[Penjelasan]Program ini merupakan program function atau fungsi yang dimana program tersebut membaca 4 angka yaitu a,b,c,d. Lalu program menghitung baris ke 1 permutasi dan kombinasi antara a dan c, dan baris 2 antara b dan d, rumus yang di pakai dalam algoritma permutasi yaitu P(n,r) = n!/(n-r)! dan kombinasi yaitu C(n,r) = n!/(r!(n-r)!).
+![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul4/output/output-soal1.png)
+[Penjelasan]Program ini intinya buat ngitung permutasi sama kombinasi dari angka yang kita masukin. Jadi pertama ada fungsi faktorial yang dipakai buat nyari nilai faktorial (perkalian dari 1 sampai n). Nah dari situ dipakai lagi di fungsi permutasi buat hitung permutasi pakai rumus n!/(n−r)!, sama di fungsi kombinasi pakai rumus n!/(r!(n−r)!). Di bagian main, program minta 4 angka yaitu a, b, c, dan d. Terus dia hitung permutasi dan kombinasi dari (a, c) sama (b, d). Hasilnya ditampilin dalam dua baris, baris pertama buat a dan c, baris kedua buat b dan d. Jadi simpel aja, input angka → dihitung → keluar hasil.
+
 
 //
 
@@ -49,97 +56,55 @@ func main () {
 ```go
 package main
 
-import "fmt"
-
-func f(x int) int {
-	return	 x * x
-}
-
-func g(x int) int {
-	return	x - 2
-}
-
-func h(x int) int {
-	return	x + 1
-}
-
-func main() {
-	var a,b,c int
-	fmt.Scan(&a,&b,&c)
-
-	hasil := f(g(h(a)))
-	hasil2 := g(h(f(b)))
-	hasil3 := h(f(g(c)))
-
-	fmt.Println(hasil)
-	fmt.Println(hasil2)
-	fmt.Println(hasil3)
-}
-
-```
-### Output Unguided :	
-
-##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal2.png)
-[Penjelasan] dari soal 2 program tersebut juga merupakan fungsi yang dimana terdapat 3 fungsi yaitu 
-- f(x) = X^2
-- g(x) = X - 2
-- h(x) = X + 1
-
-lalu program menghitung 
-- (f o g o h)(a)
-- (g o h o f)(b)
-- (h o f o g)(c)
-
-Setelah menghitung lalu fungsi dipanggil dari dalam keluar, jadi 3 fungsi tersebut dipanggil secara berurutan.
-//
-
-### 3. [Soal]
-#### soal2.go
-
-```go
-package main
-
-import (
-		"fmt"
-		"math"
+import	(
+	"fmt"
 )
 
-func jarak(a,b,c,d float64) float64 {
-	return math.Sqrt((a-c)*(a-c)+(b-d)*(b-d))
-}
+func hitungSkor(soal *int, skor *int) {
 
-func diDalam(cx, cy, r, x, y float64) bool {
-	return jarak(x, y, cx, cy) <= r
-}
+	*soal = 0
+	*skor = 0
+
+	var waktu int
+	for i := 0; i < 8; i++ {
+		fmt.Scan(&waktu)
+		
+		if waktu <= 300 {
+			*soal ++ 
+			*skor += waktu
+		}
+	}
+}	
 
 func main() {
-	var cx1, cy1, r1 float64
-	var cx2, cy2, r2 float64
-	var x, y float64
+	var nama, pemenang string
+	var maxSoal, minSkor int
+	var soal, skor int
 
-	fmt.Scan(&cx1, &cy1, &r1)
-	fmt.Scan(&cx2, &cy2, &r2)
-	fmt.Scan(&x, &y)
+	maxSoal = -1
+	minSkor = 999999
 
-	dalam1 := diDalam(cx1, cy1, r1, x, y)
-	dalam2 := diDalam(cx2, cy2, r2, x, y)
-
-	if  dalam1 && dalam2 {
-		fmt.Println("titik di dalam lingkaran 1 dan 2")
-	} else if dalam1{
-		fmt.Println("titik di dalam lingkaran 1")
-	} else if dalam2 {
-		fmt.Println("titik di dalam lingkaran 2")
-	} else {
-		fmt.Println("titik di luar lingkaran 1 dan 2")
+	for {
+		fmt.Scan(&nama)
+		if nama == "Selesai"{
+		break
 	}
-}
 
+	hitungSkor(&soal, &skor)
+
+	if soal > maxSoal || (soal == maxSoal && skor < minSkor) {
+		maxSoal = soal
+		minSkor = skor
+		pemenang = nama
+		}
+	}
+	fmt.Println(pemenang, maxSoal, minSkor)
+}
 
 ```
 ### Output Unguided :	
 
 ##### Output 
-![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul3/output/output-soal3.png)
-[Penjelasan]program tersebut adalah program yang dibuat untuk menemukan posisi titik lingkaran, program ini mengecek sebuah titik berada, dengan cara menghitung jarak titik ke pusat lingkaran pakai rumus pada soal, dab dibandingkan dengan jari-jari, jika jarak <= radius berarti di dalam jika selain itu berarti di luar dan terakhir memakai kondisi if untuk menentukan hasilnya.
+![Screenshot Output Unguided 1_](https://github.com/MuhammadJovan/109082500024_Muhammad-Jovan/blob/main/modul4/output/output-soal2.png)
+[Penjelasan] Program ini buat nentuin pemenang dari beberapa peserta. Setiap peserta masukin nama, lalu 8 waktu pengerjaan soal. Kalau waktu ≤ 300 detik, berarti soalnya dihitung benar, jadi jumlah soal nambah dan waktunya masuk ke total skor. Program bakal terus jalan sampai input nama “Selesai”. Pemenangnya dipilih dari yang soal benarnya paling banyak, kalau sama maka yang waktunya paling kecil yang menang. Terakhir ditampilin nama pemenang, jumlah soal, dan total waktunya.
+
